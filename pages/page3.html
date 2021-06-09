@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+    <div class="header">
+       <br>
+	<h2>Задание №3. Мировое время</h2>
+        
+    </div>
+    <nav>
+        <a href="/pages/page1_1.php">1 задание</a>
+        <a href="/pages/page2_1order.php">2 задание</a>
+        <a href="/pages/page3.html">3 задание</a>  
+    </nav>
+
+    <article align="center" height=400ptx>
+    <br><br>  
+ <style type="text/css">
+
+  td {  border: 2px solid red;
+  }
+ </style>
+ <table cellpadding="5" 
+style="margin: 0 25% 0 25%;border-color: gray;border-collapse: collapse; border: 6px solid gray;"
+ width="50%" cellpadding="1">
+   
+   <tr>
+    <!-- Скрипт обновления страницы раз в минуту -->
+    <script>
+setTimeout(function(){
+    location.reload();
+}, 60000);
+</script>
+    <td colspan="5" align="center">Сегодня: 
+        <!-- Скрипт для нахождения сегодняшнего дня -->
+<script type="text/javascript">
+   Data = new Date();
+Year = Data.getFullYear();
+Month = Data.getMonth();
+Day = Data.getDate();
+var date = new Date(); 
+wek = getWeekDay(date);
+
+document.write(" "+wek+"</br>");
+function getWeekDay(date) {
+    date = date || new Date();
+    var days = ['Воскресенье', 'Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота'];
+    var day = date.getDay();
+
+    return days[day];
+}
+// Преобразуем месяца
+switch (Month)
+{
+  case 0: fMonth="января"; break;
+  case 1: fMonth="февраля"; break;
+  case 2: fMonth="марта"; break;
+  case 3: fMonth="апреля"; break;
+  case 4: fMonth="мае"; break;
+  case 5: fMonth="июня"; break;
+  case 6: fMonth="июля"; break;
+  case 7: fMonth="августа"; break;
+  case 8: fMonth="сентября"; break;
+  case 9: fMonth="октября"; break;
+  case 10: fMonth="ноября"; break;
+  case 11: fMonth="декабря"; break;
+}
+// Вывод
+document.write(Day + " " + fMonth + " " + Year + " г.");
+</script>
+    </td>   
+   </tr>
+   <tr>
+    <td align="center">Москва</td>
+    <td align="center">Махачкала</td>
+    <td align="center">Каракас</td>
+    <td align="center">Ижевск</td>
+    <td align="center">Варшава</td>
+  </tr>
+  <tr>
+    <td align="center" rowspan="2">
+        <!-- Скрипт времени в Москве, для остальных зон мы будет просто вычитать часы -->
+    <script type="text/javascript">
+    
+       var date = new Date();
+       var h, m, s;
+       h = date.getHours();
+       m = date.getMinutes();
+       s = date.getSeconds();
+var correct_date = h + ':' + m + ':' + s;
+
+document.write(correct_date);
+    </script>
+    </td>
+    <td align="center">  <script type="text/javascript">
+    
+       var date = new Date();
+       var h, m, s;
+       h = date.getHours();
+       m = date.getMinutes();
+       s = date.getSeconds();
+var correct_date = h + ':' + m + ':' + s;
+
+document.write(correct_date);
+    </script></td>
+    <td align="center">  <script type="text/javascript">
+    
+       var date = new Date();
+       var h, m, s;
+       h = date.getHours()-7;
+       m = date.getMinutes();
+       s = date.getSeconds();
+var correct_date = h + ':' + m + ':' + s;
+
+document.write(correct_date);
+    </script></td>
+    <td align="center">  <script type="text/javascript">
+    
+       var date = new Date();
+       var h, m, s;
+       h = date.getHours()+1;
+       m = date.getMinutes();
+       s = date.getSeconds();
+var correct_date = h + ':' + m + ':' + s;
+
+document.write(correct_date);
+    </script></td>
+    <td align="center">  <script type="text/javascript">
+    
+       var date = new Date();
+       var h, m, s;
+       h = date.getHours()-2;
+       m = date.getMinutes();
+       s = date.getSeconds();
+var correct_date = h + ':' + m + ':' + s;
+
+document.write(correct_date);
+    </script></td>
+  </tr>
+  <tr>
+    <td align="center"><p>По MSK 0</p>
+        <p>По UTC +3</p></td>
+    <td align="center"><p>По MSK -7</p>
+        <p>По UTC -4</p></td>
+    <td align="center"><p>По MSK +1</p>
+        <p>По UTC +4</p></td>
+    <td align="center"><p>По MSK -2</p>
+        <p>По UTC +1</p>
+    </td>
+  </tr>
+  
+ </table>
+<br><br>
+      
+
+
+
+
+
+
+
+
+
+    </article>
+
+    
+
+    <footer><br>
+	<p align="center">Санкт-Петербургский политехнический университет Петра Великого. 2021 год. </p>
+<br>
+	</footer>
+
+</body>
+
+</html>

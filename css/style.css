@@ -1,0 +1,62 @@
+/* old ie */
+
+.main {
+    display: block;
+}
+
+
+/*
+body {
+    display: grid;
+    grid-template-areas: "header header" "nav nav" "article aside" "footer footer";
+    gap: 1vw;
+    grid-template-rows: auto auto 1fr;
+    grid-template-columns: 3fr 1fr;
+}
+*/
+
+.header {
+    grid-area: header;
+    background-color: #CBD2EE;
+     height: 100px; 
+    /*height: fit-content;*/
+    text-align: center;
+}
+
+nav {
+    grid-area: nav;
+    background-color: #8595D2;
+}
+
+nav a {
+    display: inline-block;
+    padding: 10px;
+    text-decoration: none;
+    border: 1px solid;
+color: black;
+font-weight: bold;
+}
+
+body article {
+    float: left;
+    width: 75%;
+    grid-area: article;
+    /*background-color: pink;*/
+}
+body{
+height: 300px; 
+background-color: #EEEEEE;}
+
+body aside {
+    float: left;
+    width: 25%;
+    grid-area: aside;
+    background-color: #FAFAD8;
+}
+
+footer {
+    display: block;
+    clear: both;
+    grid-area: footer;
+    background-color: #D7D7C8;
+}
